@@ -20,7 +20,7 @@ import sys
 
 # bind() - ip, port are the parameters,
 # listen() - linit the connections
-# close() - 
+# close() - close the connection
 # accept() - accept a client request
 
 
