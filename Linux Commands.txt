@@ -1,8 +1,9 @@
-WSL - Windows Subsystem for Linux is virtual machine that runs on windows
- -- https://allthings.how/how-to-use-linux-terminal-in-windows-10/
+WSL 
+--> Windows Subsystem for Linux is virtual machine that runs on windows
+--> https://allthings.how/how-to-use-linux-terminal-in-windows-10/
 
 Install - sudo apt install 
-Unix Commands
+Unix Commands: 
 
 Who - User Info
 pwd - Print working directory/Current directory
@@ -110,13 +111,18 @@ Fortnight(central server)
 -> connected to other client server(slower)
 ->info transferred from c1 to server, info passed to other clients
 IN local network
-Modem: connected to internet has one public ip address (physical address) ->devices connected to router(devices are connected) wirelessly, has a local ip address -> client, each device is shared with a Ip address(IPV4), local client ip address is visible to the clients connected to the same router
+Modem: connected to internet has one public ip address (physical address) 
+->devices connected to router(devices are connected) wirelessly, has a local ip address 
+-> client, each device is shared with a Ip address(IPV4), local client ip address is visible to the clients connected to the same router
 
 --> Pick the port
 --> Pick the server
 --> Bind the socket to the ip address (which ip to accept, standard way to send data)
 --> AF_INET- family of ipv4
 --> Sock_stream – establishment of connection to TCP default connection
+
+Configuring Nginx:
+Resource --> https://www.maketecheasier.com/install-nginx-server-windows/
 
 
 
