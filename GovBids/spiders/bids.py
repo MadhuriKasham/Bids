@@ -102,7 +102,15 @@ class BidsSpider(scrapy.Spider):
     
             # self.cur.execute("INSERT INTO bids_data (Bid, Bid_No, Items, Quantity, Department, Startdate, Enddate, Document) values(%s, %s, %s, %s, %s, %s, %s, %s)")
             self.con.commit()
+            self.cur.close()
+            self.con.close()
+            
 
+            Method 2:
+            
+            Uncomment below lines of code items.py is being used for crawling
+            Uncomment pipelines in settings
+            
             # bid_item = BidItem()
             
 
