@@ -33,19 +33,14 @@ class SQLPipeline:
         
 
     def process_item(self, item, spider):
-        # self.cur.execute("INSERT INTO bids_data (Bid, Bid_No, Items, Quantity, Department, Startdate, Enddate, Document) values(%s, %s, %s, %s, %s, %s, %s, %s)", 
-        #                 (item['Bid'], item['Bid_No'], item['Items'], item['Quantity'],item['Department'], item['Startdate'], item['Enddate'], item['Document'],))
+        self.cur.execute("INSERT INTO bids_data (Bid, Bid_No, Items, Quantity, Department, Startdate, Enddate, Document) values(%s, %s, %s, %s, %s, %s, %s, %s)", 
+                        (item['Bid'], item['Bid_No'], item['Items'], item['Quantity'],item['Department'], item['Startdate'], item['Enddate'], item['Document'],))
         self.cur.execute("INSERT INTO bids_data values (%s, %s, %s, %s, %s, %s, %s, %s)")
         self.con.commit()
-        # except:
-        #     self.con.rollback()
+      
         return item
 
 
-        # self.cur.execute("INSERT INTO bids_data (item['Bid'], item['Bid_No'], item['Items'], item['Quantity'], item['Department'], item['Startdate'], item['Enddate'], item['Document']) VALUES (%s, %s, %s, %s,%s, %s, %s, %s)")
-        # self.con.commit()
-        # print("Record Inserted")
-        # return item
         
 
     
