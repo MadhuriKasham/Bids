@@ -290,8 +290,10 @@ class TestbidSpider(scrapy.Spider):
             yield new_data
     
             self.con.commit()
+            self.con.close()
+            self.cur.close()
     
-
+==========================================================>>>>> CODE FOR REFERENCE <<<<<<======================================================================
     # def start_requests(self):
       
             
@@ -315,3 +317,42 @@ class TestbidSpider(scrapy.Spider):
 
     # def parse(self, response):
     #     print(response.text)
+=================================================================== STATUS OF OUTPUT GENERATED  =========================================================================
+
+=====>>>>Data Crawled status<<<<=======
+
+2023-07-02 18:25:16 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-07-02 18:25:16 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+
+{'downloader/exception_count': 4,
+ 'downloader/exception_type_count/twisted.internet.error.ConnectError': 3,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 1,
+ 'downloader/request_bytes': 8153812,
+ 'downloader/request_count': 3857,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/request_method_count/POST': 3856,
+ 'downloader/response_bytes': 11227316,
+ 'downloader/response_count': 3853,
+ 'downloader/response_status_count/200': 3853,
+ 'elapsed_time_seconds': 5098.805534,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 7, 2, 12, 55, 16, 359568),
+ 'httpcompression/response_bytes': 36110852,
+ 'httpcompression/response_count': 3852,
+ 'item_scraped_count': 38510,
+ 'log_count/DEBUG': 42370,
+ 'log_count/INFO': 30,
+ 'request_depth_max': 1,
+ 'response_received_count': 3853,
+ 'retry/count': 4,
+ 'retry/reason_count/twisted.internet.error.ConnectError': 3,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 1,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 3856,
+ 'scheduler/dequeued/memory': 3856,
+ 'scheduler/enqueued': 3856,
+ 'scheduler/enqueued/memory': 3856,
+ 'start_time': datetime.datetime(2023, 7, 2, 11, 30, 17, 554034)}
+2023-07-02 18:25:16 [scrapy.core.engine] INFO: Spider closed (finished)
