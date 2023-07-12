@@ -52,7 +52,7 @@ class Script2Spider(scrapy.Spider):
 
     def create_table(self):
         self.cur.execute(""" CREATE TABLE IF NOT EXISTS tech_data (
-                key varchar(300),
+                key varchar(300) PRIMMARY KEY,
                 Bid int,
                 Bid_No varchar(300),
                 Ra_No varchar(100),
